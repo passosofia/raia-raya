@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Raia & Raya — Português para Estrangeiros e Espanhol para Portugueses.">
+
+  <title>Raia & Raya | Aprender Português e Espanhol</title>
+
+
+  <style>
+
+    /* =====================================================
+       VARIÁVEIS
+    ===================================================== */
+
+    :root {
+
+      --azul: #073d7c;
+      --azul-escuro: #032f65;
+
+      --laranja: #f4a000;
+      --laranja-claro: #ffb52e;
+
+      --texto: #17365f;
+      --cinzento: #69778a;
+
+      --branco: #ffffff;
+
+      --fundo-claro: #fbfaf7;
+
+      --sombra:
+        0 8px 28px rgba(17, 48, 89, 0.08);
+    }
+
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      background: var(--branco);
+
+      color: var(--texto);
+
+      line-height: 1.5;
+
+    }
+
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+
+    a {
+      color: inherit;
+    }
+
+
+
+    /* =====================================================
+       CABEÇALHO
+    ===================================================== */
+
+    .site-header {
+
+      min-height: 82px;
+
+      padding:
+        0 5%;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content:
+        space-between;
+
+      gap: 30px;
+
+      background:
+        rgba(255,255,255,.97);
+
+      border-bottom:
+        1px solid
+        rgba(7,61,124,.05);
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 1000;
+
+      backdrop-filter:
+        blur(10px);
+
+    }
+
+
+
+    /* Marca */
+
+    .brand {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      text-decoration: none;
+
+      flex-shrink: 0;
+
+    }
+
+
+    .brand-icons {
+
+      width: 84px;
+
+      height: 48px;
+
+      object-fit: contain;
+
+    }
+
+
+    .brand-name {
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 23px;
+
+      line-height: 1;
+
+      white-space: nowrap;
+
+    }
+
+
+    .raia {
+      color: var(--azul);
+    }
+
+
+    .amp {
+      color: var(--azul);
+    }
+
+
+    .raya {
+      color: var(--laranja);
+    }
+
+
+
+    /* Menu */
+
+    .main-nav {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content:
+        flex-end;
+
+      gap: 30px;
+
+      font-size: 13px;
+
+    }
+
+
+    .main-nav > a {
+
+      text-decoration: none;
+
+      color: #19375e;
+
+      position: relative;
+
+      padding: 31px 0 27px;
+
+      transition:
+        color .2s ease;
+
+    }
+
+
+    .main-nav > a:hover {
+      color: var(--azul);
+    }
+
+
+    .main-nav > a.active::after {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      right: 0;
+
+      bottom: 20px;
+
+      height: 2px;
+
+      border-radius: 999px;
+
+      background: var(--azul);
+
+    }
+
+
+
+    /* Facebook do topo */
+
+    .header-social {
+
+      width: 31px;
+
+      height: 31px;
+
+      padding: 0 !important;
+
+      border-radius: 50%;
+
+      background:
+        var(--azul);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      color: white !important;
+
+      transition:
+        transform .2s ease,
+        opacity .2s ease;
+
+    }
+
+
+    .header-social:hover {
+
+      transform:
+        translateY(-2px);
+
+      opacity: .88;
+
+    }
+
+
+    .header-social svg {
+
+      width: 17px;
+      height: 17px;
+
+      fill: currentColor;
+
+    }
+
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+
+      min-height: 455px;
+
+      padding:
+        35px 5%
+        20px;
+
+      display: grid;
+
+      grid-template-columns:
+        42% 58%;
+
+      align-items: center;
+
+      gap: 10px;
+
+      overflow: hidden;
+
+      background:
+
+        radial-gradient(
+          circle
+          at 82% 50%,
+          rgba(244,160,0,.045),
+          transparent 29%
+        ),
+
+        #ffffff;
+
+    }
+
+
+
+    /* Texto */
+
+    .hero-text {
+
+      min-height: 360px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items:
+        flex-start;
+
+      justify-content:
+        space-between;
+
+      padding:
+        12px 0 40px;
+
+      position: relative;
+
+      z-index: 5;
+
+    }
+
+
+    .hero-title {
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-weight: 400;
+
+      font-size:
+        clamp(66px, 7vw, 108px);
+
+      line-height: .92;
+
+      letter-spacing: -5px;
+
+      white-space: nowrap;
+
+    }
+
+
+
+    /* Botão */
+
+    .btn-saber {
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      padding:
+        16px 29px;
+
+      border-radius: 6px;
+
+      background:
+        var(--laranja);
+
+      color: white;
+
+      text-decoration: none;
+
+      font-size: 16px;
+
+      font-weight: 500;
+
+      box-shadow:
+
+        0 7px 18px
+        rgba(244,160,0,.18);
+
+      transition:
+
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+
+    }
+
+
+    .btn-saber:hover {
+
+      transform:
+        translateY(-2px);
+
+      background:
+        var(--laranja-claro);
+
+      box-shadow:
+
+        0 10px 22px
+        rgba(244,160,0,.25);
+
+    }
+
+
+
+    /* Ilustração */
+
+    .hero-image {
+
+      min-height: 390px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      position: relative;
+
+    }
+
+
+    .hero-image img {
+
+      width: 100%;
+
+      max-width: 770px;
+
+      height: 390px;
+
+      object-fit: contain;
+
+      object-position:
+        center;
+
+      mix-blend-mode:
+        multiply;
+
+    }
+
+
+
+    /* =====================================================
+       ESCOLHA DA LÍNGUA
+    ===================================================== */
+
+    .languages {
+
+      padding:
+        15px 3%
+        32px;
+
+      background:
+        white;
+
+    }
+
+
+    .section-title {
+
+      text-align: center;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 30px;
+
+      font-weight: 400;
+
+      color: var(--azul);
+
+      margin-bottom: 28px;
+
+    }
+
+
+    .section-title::after {
+
+      content: "";
+
+      display: block;
+
+      width: 7px;
+
+      height: 7px;
+
+      border-radius: 50%;
+
+      background:
+        var(--laranja);
+
+      margin:
+        10px auto 0;
+
+    }
+
+
+
+    .language-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 23px;
+
+      max-width: 1250px;
+
+      margin: 0 auto;
+
+    }
+
+
+
+    /* Cartões */
+
+    .language-card {
+
+      min-height: 145px;
+
+      padding:
+        17px 28px;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 18px;
+
+      border-radius: 8px;
+
+      background: #fff;
+
+      text-decoration: none;
+
+      box-shadow:
+        0 3px 14px
+        rgba(22,50,89,.025);
+
+      transition:
+
+        transform .23s ease,
+        box-shadow .23s ease;
+
+    }
+
+
+    .language-card:hover {
+
+      transform:
+        translateY(-4px);
+
+      box-shadow:
+        var(--sombra);
+
+    }
+
+
+    .language-card.portugues {
+
+      border:
+        2px solid
+        var(--azul);
+
+      color: var(--azul);
+
+    }
+
+
+    .language-card.espanhol {
+
+      border:
+        2px solid
+        var(--laranja);
+
+      color:
+        #e79200;
+
+    }
+
+
+
+    /* Ícone de cada cartão */
+
+    .language-symbol {
+
+      width: 92px;
+
+      height: 92px;
+
+      flex:
+        0 0 92px;
+
+      border-radius:
+        48% 48% 48% 16%;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      overflow: hidden;
+
+    }
+
+
+    .language-symbol img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+    }
+
+
+
+    /* Português:
+       mostra só a metade azul
+       da imagem dos ícones */
+
+    .portugues
+    .language-symbol img {
+
+      width: 184px;
+
+      max-width: none;
+
+      transform:
+        translateX(46px);
+
+    }
+
+
+
+    /* Espanhol:
+       mostra só a metade laranja */
+
+    .espanhol
+    .language-symbol img {
+
+      width: 184px;
+
+      max-width: none;
+
+      transform:
+        translateX(-46px);
+
+    }
+
+
+
+    .language-info {
+
+      flex: 1;
+
+    }
+
+
+    .language-name {
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 27px;
+
+      line-height: 1.15;
+
+      font-weight: 400;
+
+    }
+
+
+    .language-level {
+
+      margin-top: 7px;
+
+      font-size: 12px;
+
+      opacity: .83;
+
+    }
+
+
+    .language-arrow {
+
+      font-family:
+        Georgia,
+        serif;
+
+      font-size: 40px;
+
+      font-weight: 300;
+
+      line-height: 1;
+
+      transition:
+        transform .2s ease;
+
+    }
+
+
+    .language-card:hover
+    .language-arrow {
+
+      transform:
+        translateX(5px);
+
+    }
+
+
+
+    /* =====================================================
+       VANTAGENS
+    ===================================================== */
+
+    .benefits {
+
+      padding:
+        22px 6%;
+
+      min-height: 105px;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      align-items: center;
+
+      gap: 20px;
+
+      background:
+
+        linear-gradient(
+          90deg,
+          #faf8f4,
+          #ffffff 50%,
+          #fbf8f2
+        );
+
+    }
+
+
+    .benefit {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 15px;
+
+      color: var(--azul);
+
+    }
+
+
+    .benefit-icon {
+
+      width: 42px;
+
+      height: 42px;
+
+      flex:
+        0 0 42px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+    }
+
+
+    .benefit-icon svg {
+
+      width: 34px;
+
+      height: 34px;
+
+      stroke: currentColor;
+
+      fill: none;
+
+      stroke-width: 1.65;
+
+      stroke-linecap: round;
+
+      stroke-linejoin: round;
+
+    }
+
+
+    .benefit-text {
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 14px;
+
+      line-height: 1.45;
+
+    }
+
+
+
+    /* =====================================================
+       RODAPÉ
+    ===================================================== */
+
+    footer {
+
+      padding:
+        29px 5%
+        15px;
+
+      color: white;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          #064487,
+          #022f65
+        );
+
+    }
+
+
+    .footer-grid {
+
+      max-width: 1250px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns:
+        1.4fr .85fr 1.25fr;
+
+      gap: 65px;
+
+    }
+
+
+    .footer-logo {
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 30px;
+
+      line-height: 1;
+
+    }
+
+
+    .footer-logo .raya {
+      color: #ffae16;
+    }
+
+
+
+    .footer-title {
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 15px;
+
+      font-weight: 400;
+
+      margin-bottom: 12px;
+
+    }
+
+
+
+    .footer-nav {
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 7px;
+
+    }
+
+
+    .footer-nav a {
+
+      color: white;
+
+      text-decoration: none;
+
+      font-size: 12px;
+
+      width: fit-content;
+
+      opacity: .92;
+
+    }
+
+
+    .footer-nav a:hover {
+
+      text-decoration: underline;
+
+    }
+
+
+
+    /* Contactos */
+
+    .email {
+
+      display:
+        inline-block;
+
+      margin-bottom: 15px;
+
+      color: white;
+
+      font-size: 17px;
+
+      font-weight: 700;
+
+      text-decoration: none;
+
+    }
+
+
+    .email:hover {
+      text-decoration: underline;
+    }
+
+
+
+    /* Redes sociais */
+
+    .social-links {
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 10px;
+
+    }
+
+
+    .social-link {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      width: fit-content;
+
+      color: white;
+
+      text-decoration: none;
+
+      font-size: 13px;
+
+      transition:
+        transform .2s ease,
+        opacity .2s ease;
+
+    }
+
+
+    .social-link:hover {
+
+      transform:
+        translateX(3px);
+
+      opacity: .84;
+
+    }
+
+
+    .social-link svg {
+
+      width: 25px;
+
+      height: 25px;
+
+      flex:
+        0 0 25px;
+
+      fill: currentColor;
+
+    }
+
+
+
+    .copyright {
+
+      max-width: 1250px;
+
+      margin:
+        25px auto 0;
+
+      padding-top: 11px;
+
+      border-top:
+
+        1px solid
+        rgba(255,255,255,.13);
+
+      font-size: 10px;
+
+      opacity: .72;
+
+    }
+
+
+
+    /* =====================================================
+       RESPONSIVO
+    ===================================================== */
+
+    @media
+    (max-width: 900px) {
+
+
+      .main-nav {
+
+        gap: 18px;
+
+      }
+
+
+      .main-nav > a:not(
+        .header-social
+      ) {
+
+        display: none;
+
+      }
+
+
+      .hero {
+
+        grid-template-columns:
+          1fr;
+
+        padding-top: 40px;
+
+      }
+
+
+      .hero-text {
+
+        min-height: auto;
+
+        padding-bottom: 10px;
+
+        gap: 35px;
+
+      }
+
+
+      .hero-title {
+
+        font-size:
+          clamp(
+            58px,
+            13vw,
+            90px
+          );
+
+      }
+
+
+      .hero-image {
+
+        min-height: 300px;
+
+      }
+
+
+      .hero-image img {
+
+        height: 320px;
+
+      }
+
+
+      .language-grid {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .benefits {
+
+        grid-template-columns:
+          repeat(2,1fr);
+
+        padding:
+          28px 8%;
+
+        row-gap: 30px;
+
+      }
+
+
+      .footer-grid {
+
+        grid-template-columns:
+          1fr;
+
+        gap: 28px;
+
+      }
+
+    }
+
+
+
+    @media
+    (max-width: 520px) {
+
+
+      .site-header {
+
+        padding:
+          0 18px;
+
+      }
+
+
+      .brand-icons {
+
+        width: 67px;
+
+      }
+
+
+      .brand-name {
+
+        font-size: 18px;
+
+      }
+
+
+      .hero {
+
+        padding:
+          30px 20px 10px;
+
+      }
+
+
+      .hero-title {
+
+        white-space: normal;
+
+        font-size: 59px;
+
+        letter-spacing: -3px;
+
+      }
+
+
+      .hero-image {
+
+        min-height: 250px;
+
+      }
+
+
+      .hero-image img {
+
+        height: 270px;
+
+      }
+
+
+      .languages {
+
+        padding:
+          25px 17px
+          32px;
+
+      }
+
+
+      .language-card {
+
+        padding:
+          16px 18px;
+
+      }
+
+
+      .language-symbol {
+
+        width: 72px;
+
+        height: 72px;
+
+        flex-basis: 72px;
+
+      }
+
+
+      .language-name {
+
+        font-size: 22px;
+
+      }
+
+
+      .language-arrow {
+
+        font-size: 31px;
+
+      }
+
+
+      .benefits {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      footer {
+
+        padding:
+          30px 22px
+          16px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- =====================================================
+     CABEÇALHO
+===================================================== -->
+
+<header class="site-header">
+
+
+  <a href="index.html"
+     class="brand">
+
+
+    <!--
+      IMAGEM COM OS DOIS ÍCONES
+      OFICIAIS RAIA & RAYA
+    -->
+
+    <img
+      src="assets/logo-icons.png"
+      alt="Símbolos Raia & Raya"
+      class="brand-icons"
+    >
+
+
+    <span class="brand-name">
+
+      <span class="raia">
+        Raia
+      </span>
+
+      <span class="amp">
+        &
+      </span>
+
+      <span class="raya">
+        Raya
+      </span>
+
+    </span>
+
+
+  </a>
+
+
+
+  <nav class="main-nav">
+
+
+    <a href="index.html"
+       class="active">
+      Início
+    </a>
+
+
+    <a href="#">
+      Sobre
+    </a>
+
+
+    <a href="#">
+      Aulas Presenciais
+    </a>
+
+
+    <a href="#">
+      Recursos
+    </a>
+
+
+    <a href="#">
+      Contactos
+    </a>
+
+
+
+    <!-- Facebook -->
+
+    <a
+      href="https://www.facebook.com/profile.php?id=61593117539070"
+
+      target="_blank"
+
+      rel="noopener noreferrer"
+
+      class="header-social"
+
+      aria-label="Facebook Raia & Raya"
+    >
+
+      <svg
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+
+        <path
+          d="M13.7 22v-8h2.7l.4-3.1h-3.1V9c0-.9.3-1.5 1.6-1.5H17V4.7c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2H7.5V14h2.8v8h3.4z"
+        />
+
+      </svg>
+
+    </a>
+
+
+  </nav>
+
+</header>
+
+
+
+
+
+<!-- =====================================================
+     CONTEÚDO
+===================================================== -->
+
+<main>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+
+  <div class="hero-text">
+
+
+    <h1 class="hero-title">
+
+      <span class="raia">
+        Raia
+      </span>
+
+      <span class="amp">
+        &
+      </span>
+
+      <span class="raya">
+        Raya
+      </span>
+
+    </h1>
+
+
+
+    <a
+      href="#linguas"
+      class="btn-saber"
+    >
+
+      Saber mais
+
+    </a>
+
+
+  </div>
+
+
+
+  <div class="hero-image">
+
+
+    <!--
+      AGUARELA:
+      TORRE DE BELÉM +
+      MOINHO DE DOM QUIXOTE
+    -->
+
+    <img
+      src="assets/hero-raia-raya.png"
+
+      alt="Ilustração em aguarela da Torre de Belém e de um moinho espanhol"
+    >
+
+
+  </div>
+
+
+</section>
+
+
+
+
+
+<!-- =====================================================
+     ESCOLHER LÍNGUA
+===================================================== -->
+
+<section
+  class="languages"
+  id="linguas"
+>
+
+
+  <h2 class="section-title">
+
+    Escolhe a língua
+
+  </h2>
+
+
+
+  <div class="language-grid">
+
+
+
+    <!-- PORTUGUÊS -->
+
+
+    <a
+      href="portugues.html"
+      class="language-card portugues"
+    >
+
+
+      <div class="language-symbol">
+
+
+        <img
+          src="assets/logo-icons.png"
+          alt=""
+        >
+
+
+      </div>
+
+
+
+      <div class="language-info">
+
+
+        <div class="language-name">
+
+          Português<br>
+          para Estrangeiros
+
+        </div>
+
+
+        <div class="language-level">
+
+          Do nível 0 ao B2
+
+        </div>
+
+
+      </div>
+
+
+
+      <div class="language-arrow">
+
+        →
+
+      </div>
+
+
+    </a>
+
+
+
+
+
+    <!-- ESPANHOL -->
+
+
+    <a
+      href="espanhol.html"
+      class="language-card espanhol"
+    >
+
+
+      <div class="language-symbol">
+
+
+        <img
+          src="assets/logo-icons.png"
+          alt=""
+        >
+
+
+      </div>
+
+
+
+      <div class="language-info">
+
+
+        <div class="language-name">
+
+          Español<br>
+          para Portugueses
+
+        </div>
+
+
+        <div class="language-level">
+
+          Do nível A1 ao B2
+
+        </div>
+
+
+      </div>
+
+
+
+      <div class="language-arrow">
+
+        →
+
+      </div>
+
+
+    </a>
+
+
+  </div>
+
+
+</section>
+
+
+
+
+
+<!-- =====================================================
+     VANTAGENS
+===================================================== -->
+
+<section class="benefits">
+
+
+
+  <!-- 1 -->
+
+  <div class="benefit">
+
+
+    <div class="benefit-icon">
+
+      <svg viewBox="0 0 24 24">
+
+        <path
+          d="M4 4h16v16H4z"
+        />
+
+        <path
+          d="M8 8h8M8 12h8M8 16h5"
+        />
+
+      </svg>
+
+    </div>
+
+
+    <div class="benefit-text">
+
+      Aulas claras<br>
+      e organizadas
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- 2 -->
+
+  <div class="benefit">
+
+
+    <div class="benefit-icon">
+
+      <svg viewBox="0 0 24 24">
+
+        <circle
+          cx="12"
+          cy="12"
+          r="9"
+        />
+
+        <path
+          d="M10 8l6 4-6 4z"
+        />
+
+      </svg>
+
+    </div>
+
+
+    <div class="benefit-text">
+
+      Áudios e vídeos<br>
+      para praticar
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- 3 -->
+
+  <div class="benefit">
+
+
+    <div class="benefit-icon">
+
+      <svg viewBox="0 0 24 24">
+
+        <rect
+          x="4"
+          y="4"
+          width="16"
+          height="16"
+          rx="2"
+        />
+
+        <path
+          d="M8 12l3 3 5-7"
+        />
+
+      </svg>
+
+    </div>
+
+
+    <div class="benefit-text">
+
+      Exercícios<br>
+      interativos
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- 4 -->
+
+  <div class="benefit">
+
+
+    <div class="benefit-icon">
+
+      <svg viewBox="0 0 24 24">
+
+        <path
+          d="M4 17l5-5 4 3 7-8"
+        />
+
+        <path
+          d="M15 7h5v5"
+        />
+
+      </svg>
+
+    </div>
+
+
+    <div class="benefit-text">
+
+      Progressão passo<br>
+      a passo
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+</main>
+
+
+
+
+
+<!-- =====================================================
+     RODAPÉ
+===================================================== -->
+
+<footer>
+
+
+  <div class="footer-grid">
+
+
+
+    <!-- Marca -->
+
+    <div>
+
+
+      <div class="footer-logo">
+
+        Raia &
+
+        <span class="raya">
+
+          Raya
+
+        </span>
+
+      </div>
+
+
+    </div>
+
+
+
+
+    <!-- Navegação -->
+
+    <div>
+
+
+      <h3 class="footer-title">
+
+        Navegação
+
+      </h3>
+
+
+      <div class="footer-nav">
+
+
+        <a href="index.html">
+          Início
+        </a>
+
+
+        <a href="#">
+          Sobre
+        </a>
+
+
+        <a href="#">
+          Aulas Presenciais
+        </a>
+
+
+        <a href="#">
+          Recursos
+        </a>
+
+
+        <a href="#">
+          Contactos
+        </a>
+
+
+      </div>
+
+
+    </div>
+
+
+
+
+    <!-- Contactos -->
+
+    <div>
+
+
+      <h3 class="footer-title">
+
+        Contactos
+
+      </h3>
+
+
+
+      <a
+        href="mailto:raia.e.raya@gmail.com"
+
+        class="email"
+      >
+
+        raia.e.raya@gmail.com
+
+      </a>
+
+
+
+      <div class="social-links">
+
+
+
+        <!-- Facebook -->
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61593117539070"
+
+          target="_blank"
+
+          rel="noopener noreferrer"
+
+          class="social-link"
+        >
+
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+
+            <path
+              d="M13.7 22v-8h2.7l.4-3.1h-3.1V9c0-.9.3-1.5 1.6-1.5H17V4.7c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2H7.5V14h2.8v8h3.4z"
+            />
+
+          </svg>
+
+
+          <span>
+            Raia & Raya
+          </span>
+
+
+        </a>
+
+
+
+
+        <!-- YouTube -->
+
+        <a
+          href="https://www.youtube.com/@RaiaRaya-aprenderl%C3%ADnguas"
+
+          target="_blank"
+
+          rel="noopener noreferrer"
+
+          class="social-link"
+        >
+
+
+          <svg
+            viewBox="0 0 24 24"
+
+            aria-hidden="true"
+          >
+
+            <path
+              d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"
+            />
+
+          </svg>
+
+
+          <span>
+            Raia & Raya
+          </span>
+
+
+        </a>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="copyright">
+
+    © 2026 Raia & Raya
+
+  </div>
+
+
+</footer>
+
+
+</body>
+
+</html>
