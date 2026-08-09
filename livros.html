@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-PT">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Livros digitais em português e espanhol da Raia &amp; Raya."><title>Livros | Raia &amp; Raya</title><link rel="stylesheet" href="assets/pages.css"></head>
+<body>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="index.html" aria-label="Raia &amp; Raya — Início"><img class="brand-icons" src="assets/logo-icons.png" alt="Símbolos oficiais Raia &amp; Raya"><span class="brand-name"><span class="blue">Raia &amp;</span> <span class="orange">Raya</span></span></a><nav class="desktop-nav" aria-label="Navegação principal"><a href="index.html">Início</a><a href="conteudos.html">Conteúdos</a><a href="livros.html" aria-current="page">Livros</a><a href="contactos.html">Contactos</a></nav><details class="mobile-nav"><summary aria-label="Abrir menu"><span class="menu-icon" aria-hidden="true">☰</span></summary><nav class="mobile-menu" aria-label="Navegação móvel"><a href="index.html">Início</a><a href="conteudos.html">Conteúdos</a><a href="livros.html" aria-current="page">Livros</a><a href="contactos.html">Contactos</a></nav></details></div></header>
+  <main class="page-main">
+    <section class="page-hero"><div class="container"><p class="eyebrow">Catálogo digital</p><h1 class="page-title">Livros sem fronteiras</h1><p class="page-subtitle">Histórias e ideias em português e espanhol, pensadas para atravessar línguas e aproximar leitores.</p></div></section>
+    <section class="content-section">
+      <div class="container">
+        <h2 class="catalogue-heading">Descubra os nossos livros</h2>
+        <div class="book-grid">
+          <article class="book-card">
+            <button class="book-cover-button" type="button" data-open-book aria-label="Ver detalhes de A Menina da Torre e o Menino do Moinho">
+              <img src="assets/a-menina-da-torre-capa.png" alt="Capa do livro A Menina da Torre e o Menino do Moinho">
+              <span class="book-cover-overlay">Ver detalhes</span>
+            </button>
+            <div class="book-info">
+              <h3 class="book-title">A Menina da Torre e o Menino do Moinho</h3>
+              <p class="book-author">Sofia Passos</p>
+              <div class="book-actions">
+                <button class="button button-secondary" type="button" data-open-book>Ver detalhes</button>
+                <span class="button button-disabled" title="O PDF estará disponível em breve" aria-disabled="true">Descarregar em breve</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="book-dialog" id="book-details" aria-labelledby="book-dialog-title">
+    <button class="dialog-close" type="button" data-close-book aria-label="Fechar detalhes">×</button>
+    <div class="dialog-layout">
+      <img class="dialog-cover" src="assets/a-menina-da-torre-capa.png" alt="Capa do livro A Menina da Torre e o Menino do Moinho">
+      <div>
+        <p class="dialog-kicker">Ficha técnica</p>
+        <h2 class="dialog-title" id="book-dialog-title">A Menina da Torre e o Menino do Moinho</h2>
+        <p class="dialog-author">Uma história Raia &amp; Raya, por Sofia Passos</p>
+        <dl class="book-meta">
+          <dt>Autora</dt><dd>Sofia Passos</dd>
+          <dt>Editora</dt><dd>Raia &amp; Raya</dd>
+          <dt>Formato</dt><dd>Livro digital (PDF)</dd>
+          <dt>Idioma</dt><dd>Português</dd>
+          <dt>Número de páginas</dt><dd>21</dd>
+          <dt>Ano</dt><dd>2026</dd>
+        </dl>
+        <p class="dialog-note">O ficheiro PDF está a ser preparado e ficará disponível para download em breve.</p>
+        <span class="button button-disabled" aria-disabled="true">Descarregar em breve</span>
+      </div>
+    </div>
+  </dialog>
+  <footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand">Raia &amp; <span class="orange">Raya</span></div><div><h2 class="footer-heading">Navegação</h2><nav class="footer-nav"><a href="index.html">Início</a><a href="conteudos.html">Conteúdos</a><a href="livros.html">Livros</a><a href="contactos.html">Contactos</a></nav></div><div><h2 class="footer-heading">Contactos</h2><a class="footer-email" href="mailto:raia.e.raya@gmail.com">raia.e.raya@gmail.com</a><div class="footer-socials"><a href="https://www.youtube.com/@RaiaRaya-aprenderl%C3%ADnguas" target="_blank" rel="noopener noreferrer">Raia &amp; Raya no YouTube</a></div></div></div><div class="copyright">© 2026 Raia &amp; Raya</div></div></footer>
+  <script>
+    const bookDialog = document.querySelector('#book-details');
+    document.querySelectorAll('[data-open-book]').forEach((button) => {
+      button.addEventListener('click', () => bookDialog.showModal());
+    });
+    document.querySelector('[data-close-book]').addEventListener('click', () => bookDialog.close());
+    bookDialog.addEventListener('click', (event) => {
+      if (event.target === bookDialog) bookDialog.close();
+    });
+  </script>
+</body></html>
