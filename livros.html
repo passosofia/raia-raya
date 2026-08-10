@@ -30,6 +30,29 @@
             </div>
           </article>
         </div>
+        <div class="catalogue-intro territory-catalogue-intro">
+          <p class="eyebrow">Territórios da Raia</p>
+          <h2 class="catalogue-heading">Caminha — A Guarda</h2>
+          <p class="catalogue-description">Histórias inspiradas nas paisagens, memórias e comunidades das duas margens do rio Minho.</p>
+        </div>
+        <div class="book-grid">
+          <article class="book-card">
+            <button class="book-cover-button" type="button" data-open-dialog="minho-book-details" aria-label="Ver detalhes de Nas Margens do Rio Minho">
+              <img src="assets/nas-margens-rio-minho-capa.webp" alt="Capa de Nas Margens do Rio Minho — Caminha e A Guarda">
+              <span class="book-cover-overlay">Ver detalhes</span>
+            </button>
+            <div class="book-info">
+              <p class="book-category">Territórios da Raia · Caminha — A Guarda</p>
+              <h3 class="book-title">Nas Margens do Rio Minho</h3>
+              <p class="book-author">Sofia Passos</p>
+              <p class="book-status">Manuscrito em desenvolvimento · Excerto</p>
+              <div class="book-actions">
+                <button class="button button-secondary" type="button" data-open-dialog="minho-book-details">Ver detalhes</button>
+                <a class="button" href="assets/livros/nas-margens-do-rio-minho-excerto.pdf" download>Descarregar excerto</a>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
   </main>
@@ -54,16 +77,41 @@
       </div>
     </div>
   </dialog>
+  <dialog class="book-dialog" id="minho-book-details" aria-labelledby="minho-dialog-title">
+    <button class="dialog-close" type="button" data-close-dialog aria-label="Fechar detalhes">×</button>
+    <div class="dialog-layout">
+      <img class="dialog-cover" src="assets/nas-margens-rio-minho-capa.webp" alt="Capa de Nas Margens do Rio Minho — Caminha e A Guarda">
+      <div>
+        <p class="dialog-kicker">Territórios da Raia · Caminha — A Guarda</p>
+        <h2 class="dialog-title" id="minho-dialog-title">Nas Margens do Rio Minho</h2>
+        <p class="dialog-author">Manuscrito em desenvolvimento, por Sofia Passos</p>
+        <p class="dialog-note">Está disponível um excerto desta obra em desenvolvimento.</p>
+        <dl class="book-meta">
+          <dt>Autora</dt><dd>Sofia Passos</dd>
+          <dt>Editora</dt><dd>Raia &amp; Raya</dd>
+          <dt>Território</dt><dd>Caminha — A Guarda</dd>
+          <dt>Formato</dt><dd>Excerto digital (PDF)</dd>
+          <dt>Número de páginas</dt><dd>11</dd>
+          <dt>Ano</dt><dd>2026</dd>
+        </dl>
+        <a class="button" href="assets/livros/nas-margens-do-rio-minho-excerto.pdf" download>Descarregar excerto</a>
+      </div>
+    </div>
+  </dialog>
   <footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand">Raia &amp; <span class="orange">Raya</span></div><div><h2 class="footer-heading">Navegação</h2><nav class="footer-nav"><a href="index.html">Início</a><a href="livros.html">Livros</a><a href="raia-raya.html">Territórios</a><a href="index.html#manifesto">A editora</a><a href="contactos.html">Contactos</a></nav></div><div><h2 class="footer-heading">Contactos</h2><a class="footer-email" href="mailto:raia.e.raya@gmail.com">raia.e.raya@gmail.com</a></div></div><div class="copyright">© 2026 Raia &amp; Raya</div></div></footer>
   <script>
-    const bookDialog = document.querySelector('#book-details');
     document.querySelectorAll('[data-open-book]').forEach((button) => {
-      button.addEventListener('click', () => bookDialog.showModal());
+      button.addEventListener('click', () => document.querySelector('#book-details').showModal());
     });
-    document.querySelector('[data-close-book]').addEventListener('click', () => bookDialog.close());
-    bookDialog.addEventListener('click', (event) => {
-      if (event.target === bookDialog) bookDialog.close();
+    document.querySelectorAll('[data-open-dialog]').forEach((button) => {
+      button.addEventListener('click', () => document.querySelector(`#${button.dataset.openDialog}`).showModal());
+    });
+    document.querySelectorAll('.book-dialog').forEach((dialog) => {
+      dialog.querySelector('[data-close-book], [data-close-dialog]').addEventListener('click', () => dialog.close());
+      dialog.addEventListener('click', (event) => {
+        if (event.target === dialog) dialog.close();
+      });
     });
   </script>
-  <script src="assets/bilingue.js?v=1"></script>
+  <script src="assets/bilingue.js?v=2"></script>
 </body></html>

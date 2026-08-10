@@ -14,3 +14,9 @@ const language=localStorage.getItem('raia-language')==='es'?'es':'pt';const key=
 document.querySelectorAll('.city-select').forEach(card=>card.addEventListener('click',()=>renderCityProfile(card.dataset.city)));
 const selectedSlug=new URLSearchParams(location.search).get('cidade');
 if(selectedSlug){const selectedName=Object.keys(cityImages).find(name=>cityImages[name]===selectedSlug);if(selectedName)renderCityProfile(selectedName);}
+
+const territoryBooks=document.querySelector('#territory-books');
+if(territoryBooks&&key==='caminha-guarda'){
+  territoryBooks.hidden=false;
+  territoryBooks.innerHTML=`<div class="territory-book-layout"><img class="territory-book-cover" src="assets/nas-margens-rio-minho-capa.webp" alt="${language==='es'?'Portada':'Capa'} de Nas Margens do Rio Minho"><div class="territory-book-copy"><p class="eyebrow">${language==='es'?'Libro del territorio':'Livro do território'}</p><h2>Nas Margens do Rio Minho</h2><p>${language==='es'?'Una historia inspirada en Caminha, A Guarda y las dos orillas del río Miño.':'Uma história inspirada em Caminha, A Guarda e nas duas margens do rio Minho.'}</p><p class="territory-book-status">${language==='es'?'Manuscrito en desarrollo · Fragmento':'Manuscrito em desenvolvimento · Excerto'}</p><div class="territory-book-actions"><a href="assets/livros/nas-margens-do-rio-minho-excerto.pdf" download>${language==='es'?'Descargar fragmento':'Descarregar excerto'}</a><a class="secondary" href="livros.html">${language==='es'?'Ver en Libros':'Ver em Livros'}</a></div></div></div>`;
+}
