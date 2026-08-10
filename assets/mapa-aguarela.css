@@ -1,0 +1,7 @@
+.iberian-map{min-height:0;aspect-ratio:887/1774;border:0;border-radius:24px;background:#f7f3e8;box-shadow:0 20px 55px rgb(7 61 124/13%)}
+.watercolor-map{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.map-stops a{width:76%;grid-template-columns:1fr 30px 1fr;padding:4px 10px;border:1px solid rgb(255 255 255/75%);background:rgb(255 255 255/78%);box-shadow:0 3px 10px rgb(7 61 124/12%);font-size:.68rem;backdrop-filter:blur(2px)}
+.map-stops a:hover{transform:translate(-50%,-55%) scale(1.025);background:#fff;box-shadow:0 8px 20px rgb(7 61 124/18%)}
+.map-stops b{width:26px;height:26px;font-size:.72rem;box-shadow:0 2px 7px rgb(7 61 124/18%)}
+@media(max-width:820px){.iberian-map{min-height:0}}
+@media(max-width:520px){.iberian-map{min-height:0}.map-stops a{width:88%;grid-template-columns:1fr 26px 1fr;padding:3px 7px;font-size:.58rem}.map-stops b{width:23px;height:23px}}
