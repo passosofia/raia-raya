@@ -23,3 +23,5 @@
 @media(max-width:560px){.book-grid{grid-template-columns:1fr}.book-card{max-width:340px;margin-inline:auto}.dialog-layout{grid-template-columns:1fr;padding:24px}.dialog-cover{width:min(280px,82%);margin-inline:auto}.dialog-title{margin-right:32px}.book-meta{grid-template-columns:1fr;gap:2px}.book-meta dd{margin-bottom:8px}}
 @media(max-width:460px){.brand-name{display:none}.resource-grid,.content-catalogue .resource-grid{grid-template-columns:1fr}.level-heading{align-items:center}.level-badge{width:54px;height:54px;flex-basis:54px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important}}
+/* Texto editorial bilingue */
+.site-translation{display:block;margin-top:.38em;color:#6f604e;font-size:.86em;font-style:italic;font-weight:400;line-height:1.5;letter-spacing:0;text-transform:none}.site-footer .site-translation{color:rgba(255,255,255,.7)}
