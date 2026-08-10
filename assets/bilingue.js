@@ -5,7 +5,8 @@
   Object.assign(inline,{
     'Descarregar excerto':'Descarregar excerto / Descargar fragmento',
     'Território':'Território / Territorio',
-    'Excerto digital (PDF)':'Excerto digital (PDF) / Fragmento digital (PDF)'
+    'Excerto digital (PDF)':'Excerto digital (PDF) / Fragmento digital (PDF)',
+    'Territórios da Raia · Caminha — A Guarda':'Territórios da Raia · Caminha — A Guarda / Territorios de la Raya · Caminha — A Guarda'
   });
   const blocks={
     'Projecto literário que pretende exaltar a língua e cultura raiana.':'Proyecto literario que pretende exaltar la lengua y la cultura de la Raya.',
@@ -44,7 +45,10 @@
     'Histórias inspiradas nas paisagens, memórias e comunidades das duas margens do rio Minho.':'Historias inspiradas en los paisajes, recuerdos y comunidades de las dos orillas del río Miño.',
     'Manuscrito em desenvolvimento · Excerto':'Manuscrito en desarrollo · Fragmento',
     'Manuscrito em desenvolvimento, por Sofia Passos':'Manuscrito en desarrollo, de Sofia Passos',
-    'Está disponível um excerto desta obra em desenvolvimento.':'Está disponible un fragmento de esta obra en desarrollo.'
+    'Está disponível um excerto desta obra em desenvolvimento.':'Está disponible un fragmento de esta obra en desarrollo.',
+    'Uma história inspirada em Caminha, A Guarda e nas duas margens do rio Minho.':'Una historia inspirada en Caminha, A Guarda y en las dos orillas del río Miño.',
+    'Manuscrito em desenvolvimento: está disponível um excerto desta obra.':'Manuscrito en desarrollo: está disponible un fragmento de esta obra.',
+    'Descubra também os restantes territórios da coleção. Os novos livros serão apresentados nesta área à medida que forem publicados.':'Descubra también los demás territorios de la colección. Los nuevos libros se presentarán en esta área a medida que se publiquen.'
   };
   const language=localStorage.getItem('raia-language')==='es'?'es':'pt';
   window.siteLanguage=language;
