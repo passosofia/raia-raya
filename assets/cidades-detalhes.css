@@ -7,6 +7,7 @@
 .city-select .city-copy h2{margin:0}
 .city-select .city-open{display:flex;align-items:center;justify-content:space-between;padding:10px 26px 24px}
 .city-select .city-open b{font-size:1.25rem}
+.territory-intro{max-width:720px;margin:18px 0 0;padding-left:18px;border-left:3px solid #f4a000;color:#536a86;font-family:Georgia,"Times New Roman",serif;font-size:1.05rem}
 .city-open{display:block;padding:0 26px 22px;color:#f4a000;font-size:.78rem;font-weight:700}
 .city-detail{margin-top:34px;padding:clamp(24px,5vw,42px);border:1px solid rgb(7 61 124/12%);border-radius:22px;background:linear-gradient(145deg,#f6faff,#fffaf0);scroll-margin-top:100px}
 .city-detail[hidden]{display:none}
@@ -19,4 +20,5 @@
 .city-detail-grid h3 small{color:#d88900;font-size:.72em;font-weight:400}
 .city-detail-grid p{margin:5px 0;color:#536a86;font-size:.84rem;line-height:1.55}
 .city-detail-grid p[lang=es]{color:#80643f;font-style:italic}
+.site-footer .footer-grid>div:first-child>p{max-width:280px;margin:10px 0 0;color:rgb(255 255 255/70%);font-size:.78rem}
 @media(max-width:650px){.city-detail-grid{grid-template-columns:1fr}.city-detail-grid article:last-child{grid-column:auto}}
