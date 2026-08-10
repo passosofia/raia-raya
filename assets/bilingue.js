@@ -31,6 +31,20 @@
     'Aqui nasce o contexto das nossas histórias: os lugares, as memórias, os sabores e as vozes que dão verdade à ficção.':'Aquí nace el contexto de nuestras historias: los lugares, los recuerdos, los sabores y las voces que dan verdad a la ficción.',
     'Literatura histórica bem-humorada da Raia Ibérica.':'Literatura histórica con humor de la Raya Ibérica.'
   };
-  document.querySelectorAll('a,button,summary,dt,dd,.footer-heading,.eyebrow,.place,.dialog-kicker').forEach(el=>{const key=el.textContent.trim();if(inline[key]&&el.children.length===0)el.textContent=inline[key]});
-  document.querySelectorAll('p,h1,h2,h3,.manifesto-mark,.hero-note').forEach(el=>{const key=el.textContent.trim();if(!blocks[key]||el.querySelector('.site-translation'))return;const span=document.createElement('span');span.className='site-translation';span.lang='es';span.textContent=blocks[key];el.appendChild(span)});
+  const language=localStorage.getItem('raia-language')==='es'?'es':'pt';
+  window.siteLanguage=language;
+  document.documentElement.lang=language==='es'?'es-ES':'pt-PT';
+  const style=document.createElement('style');
+  style.textContent='.language-switcher{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;align-items:center;gap:4px;padding:6px;border:1px solid rgba(7,61,124,.16);border-radius:999px;background:rgba(255,255,255,.96);box-shadow:0 9px 28px rgba(7,61,124,.2);backdrop-filter:blur(10px)}.language-switcher span{padding:0 7px;color:#526982;font:700 .66rem Arial,sans-serif;text-transform:uppercase;letter-spacing:.08em}.language-switcher button{min-width:38px;height:34px;border:0;border-radius:999px;color:#073d7c;background:transparent;font-weight:700;cursor:pointer}.language-switcher button[aria-pressed="true"]{color:#fff;background:#073d7c}.language-switcher button:last-child[aria-pressed="true"]{background:#f4a000}@media(max-width:600px){.language-switcher{right:10px;bottom:10px}.language-switcher span{display:none}}';
+  document.head.appendChild(style);
+  const switcher=document.createElement('div');
+  switcher.className='language-switcher';
+  switcher.setAttribute('aria-label',language==='es'?'Seleccionar idioma':'Selecionar idioma');
+  switcher.innerHTML=`<span>${language==='es'?'Idioma':'Língua'}</span><button type="button" data-site-lang="pt" aria-pressed="${language==='pt'}">PT</button><button type="button" data-site-lang="es" aria-pressed="${language==='es'}">ES</button>`;
+  document.body.appendChild(switcher);
+  switcher.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{localStorage.setItem('raia-language',button.dataset.siteLang);location.reload()}));
+  if(language==='es'){
+    document.querySelectorAll('a,button,summary,dt,dd,.footer-heading,.eyebrow,.place,.book-category,.dialog-kicker').forEach(el=>{const key=el.textContent.trim();if(inline[key]&&el.children.length===0)el.textContent=inline[key].split(' / ').pop()});
+    document.querySelectorAll('p,h1,h2,h3,.manifesto-mark,.hero-note').forEach(el=>{const key=el.textContent.trim();if(blocks[key])el.textContent=blocks[key]});
+  }
 })();

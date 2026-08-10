@@ -12,9 +12,10 @@
     ['vrsa-ayamonte','vila-real-santo-antonio','Vila Real de Santo António','pt',56,91],['vrsa-ayamonte','ayamonte','Ayamonte','es',70,91]
   ];
   const markers=document.getElementById('map-markers'),cards=document.getElementById('city-cards');if(!markers||!cards)return;
+  const language=localStorage.getItem('raia-language')==='es'?'es':'pt';
   const url=city=>`par-raiano.html?par=${city[0]}&cidade=${city[1]}`;
   markers.innerHTML=cities.map(c=>`<a id="marker-${c[1]}" class="map-marker ${c[3]}" style="--x:${c[4]}%;--y:${c[5]}%" href="${url(c)}" aria-label="Explorar ${c[2]}"><span>${c[2]}</span></a>`).join('');
-  cards.innerHTML=cities.map(c=>`<a id="card-${c[1]}" class="map-city-card ${c[3]}" href="${url(c)}"><img src="assets/cidades/${c[1]}.webp" alt="Ilustração em aguarela de ${c[2]}"><div class="map-city-copy"><small>${c[3]==='pt'?'Portugal':'España'}</small><h2>${c[2]}</h2><span>Explorar a cidade / Explorar la ciudad →</span></div></a>`).join('');
+  cards.innerHTML=cities.map(c=>`<a id="card-${c[1]}" class="map-city-card ${c[3]}" href="${url(c)}"><img src="assets/cidades/${c[1]}.webp" alt="${language==='es'?'Ilustración en acuarela':'Ilustração em aguarela'} de ${c[2]}"><div class="map-city-copy"><small>${c[3]==='pt'?'Portugal':'España'}</small><h2>${c[2]}</h2><span>${language==='es'?'Explorar la ciudad':'Explorar a cidade'} →</span></div></a>`).join('');
   const activate=(slug,on)=>{document.getElementById(`marker-${slug}`)?.classList.toggle('active',on);document.getElementById(`card-${slug}`)?.classList.toggle('active',on)};
   cities.forEach(c=>{const slug=c[1],marker=document.getElementById(`marker-${slug}`),card=document.getElementById(`card-${slug}`);[marker,card].forEach(el=>{el.addEventListener('mouseenter',()=>activate(slug,true));el.addEventListener('mouseleave',()=>activate(slug,false));el.addEventListener('focus',()=>activate(slug,true));el.addEventListener('blur',()=>activate(slug,false));});marker.addEventListener('mouseenter',()=>card.scrollIntoView({block:'nearest',behavior:'smooth'}));});
 })();
