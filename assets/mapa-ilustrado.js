@@ -1,9 +1,9 @@
 (() => {
   const cities=[
-    ['caminha-guarda','caminha','Caminha','pt',38,8],['caminha-guarda','a-guarda','A Guarda','es',54,6],
-    ['valenca-tui','valenca','Valença','pt',45,12],['valenca-tui','tui','Tui','es',61,10],
-    ['moncao-salvaterra','moncao','Monção','pt',51,16],['moncao-salvaterra','salvaterra-de-mino','Salvaterra de Miño','es',68,14],
-    ['chaves-verin','chaves','Chaves','pt',57,18],['chaves-verin','verin','Verín','es',75,15],
+    ['caminha-guarda','caminha','Caminha','pt',38,8],['caminha-guarda','a-guarda','A Guarda','es',61,6],
+    ['valenca-tui','valenca','Valença','pt',45,12],['valenca-tui','tui','Tui','es',68,10],
+    ['moncao-salvaterra','moncao','Monção','pt',51,16],['moncao-salvaterra','salvaterra-de-mino','Salvaterra de Miño','es',75,14],
+    ['chaves-verin','chaves','Chaves','pt',57,18],['chaves-verin','verin','Verín','es',82,15],
     ['miranda-zamora','miranda-do-douro','Miranda do Douro','pt',70,30],['miranda-zamora','zamora','Zamora','es',84,29],
     ['almeida-rodrigo','almeida','Almeida','pt',65,40],['almeida-rodrigo','ciudad-rodrigo','Ciudad Rodrigo','es',78,40],
     ['marvao-valencia','marvao','Marvão','pt',61,58],['marvao-valencia','valencia-de-alcantara','Valencia de Alcántara','es',75,57],
