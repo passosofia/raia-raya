@@ -28,7 +28,9 @@
     'valenca': { x: 1.2, y: 0.55 },
     'tui': { x: -1.2, y: -0.55 },
     'moncao': { x: 1.25, y: 0.55 },
-    'salvaterra-de-mino': { x: -1.25, y: -0.55 }
+    'salvaterra-de-mino': { x: -1.25, y: -0.55 },
+    'vila-real-santo-antonio': { x: -1.25, y: 0.55 },
+    'ayamonte': { x: 1.25, y: -0.55 }
   };
   const position = city => ({
     x: (city[4] - bounds.west) / (bounds.east - bounds.west) * 100 + (displayOffsets[city[1]]?.x || 0),
