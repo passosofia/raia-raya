@@ -6,7 +6,8 @@
     'Descarregar excerto':'Descarregar excerto / Descargar fragmento',
     'Território':'Território / Territorio',
     'Excerto digital (PDF)':'Excerto digital (PDF) / Fragmento digital (PDF)',
-    'Territórios da Raia · Caminha — A Guarda':'Territórios da Raia · Caminha — A Guarda / Territorios de la Raya · Caminha — A Guarda'
+    'Territórios da Raia · Caminha — A Guarda':'Territórios da Raia · Caminha — A Guarda / Territorios de la Raya · Caminha — A Guarda',
+    'Visitar a área de livros':'Visitar a área de livros / Visitar la sección de libros'
   });
   const blocks={
     'Projecto literário que pretende exaltar a língua e cultura raiana.':'Proyecto literario que pretende exaltar la lengua y la cultura de la Raya.',
@@ -48,7 +49,12 @@
     'Está disponível um excerto desta obra em desenvolvimento.':'Está disponible un fragmento de esta obra en desarrollo.',
     'Uma história inspirada em Caminha, A Guarda e nas duas margens do rio Minho.':'Una historia inspirada en Caminha, A Guarda y en las dos orillas del río Miño.',
     'Manuscrito em desenvolvimento: está disponível um excerto desta obra.':'Manuscrito en desarrollo: está disponible un fragmento de esta obra.',
-    'Descubra também os restantes territórios da coleção. Os novos livros serão apresentados nesta área à medida que forem publicados.':'Descubra también los demás territorios de la colección. Los nuevos libros se presentarán en esta área a medida que se publiquen.'
+    'Descubra também os restantes territórios da coleção. Os novos livros serão apresentados nesta área à medida que forem publicados.':'Descubra también los demás territorios de la colección. Los nuevos libros se presentarán en esta área a medida que se publiquen.',
+    'Novos livros das coleções Territórios da Raia e Além Raia serão apresentados em breve.':'Próximamente se presentarán nuevos libros de las colecciones Territorios de la Raya y Más allá de la Raya.',
+    'Novas histórias a caminho':'Nuevas historias en camino',
+    'Estamos a preparar um novo catálogo. Volte em breve para descobrir os próximos livros.':'Estamos preparando un nuevo catálogo. Vuelva pronto para descubrir los próximos libros.',
+    'O novo catálogo da Raia & Raya está em preparação.':'El nuevo catálogo de Raia & Raya está en preparación.',
+    'Em breve encontrará aqui os novos livros das coleções Territórios da Raia e Além Raia.':'Próximamente encontrará aquí los nuevos libros de las colecciones Territorios de la Raya y Más allá de la Raya.'
   };
   const language=localStorage.getItem('raia-language')==='es'?'es':'pt';
   window.siteLanguage=language;
