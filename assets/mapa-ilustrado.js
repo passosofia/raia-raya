@@ -22,9 +22,17 @@
     ['vrsa-ayamonte', 'ayamonte', 'Ayamonte', 'es', -7.4083, 37.2145]
   ];
   const bounds = { west: -9.65, east: -5.20, north: 42.30, south: 36.85 };
+  const displayOffsets = {
+    'caminha': { x: 1.15, y: 0.55 },
+    'a-guarda': { x: -1.15, y: -0.55 },
+    'valenca': { x: 1.2, y: 0.55 },
+    'tui': { x: -1.2, y: -0.55 },
+    'moncao': { x: 1.25, y: 0.55 },
+    'salvaterra-de-mino': { x: -1.25, y: -0.55 }
+  };
   const position = city => ({
-    x: (city[4] - bounds.west) / (bounds.east - bounds.west) * 100,
-    y: (bounds.north - city[5]) / (bounds.north - bounds.south) * 100
+    x: (city[4] - bounds.west) / (bounds.east - bounds.west) * 100 + (displayOffsets[city[1]]?.x || 0),
+    y: (bounds.north - city[5]) / (bounds.north - bounds.south) * 100 + (displayOffsets[city[1]]?.y || 0)
   });
   const markers = document.getElementById('map-markers');
   const cards = document.getElementById('city-cards');
