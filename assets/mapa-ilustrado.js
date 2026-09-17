@@ -60,6 +60,5 @@
       element.addEventListener('focus', () => activate(slug, true));
       element.addEventListener('blur', () => activate(slug, false));
     });
-    marker.addEventListener('mouseenter', () => card.scrollIntoView({ block: 'nearest', behavior: 'smooth' }));
   });
 })();
